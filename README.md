@@ -25,7 +25,7 @@ There are a few problems with FormObjects in MMA, which otherwise work well with
    
 - custom field controllers
 
-  While `formObject["x"]` automatically creating a controller is nice but it is either this or you need to assemble your controller from scratch.
+  The `formObject["x"]` automatically creating a controller is nice but it is either this or you need to assemble your controller from scratch.
   
   ``WLForms` `` allows you to do `FieldController @ whatever[Dynamic[form@"x"]]` and the `FieldController` wrapper will take care of labeling it in case of interpretation failure. Future releases will bring more features.
   
