@@ -1,58 +1,224 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 12.1' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[      1445,         49]
-NotebookOptionsPosition[       871,         33]
-NotebookOutlinePosition[      1224,         48]
-CellTagsIndexPosition[      1181,         45]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
 Notebook[{
-Cell["WLForms", "Title"],
+
+Cell[CellGroupData[{
+Cell["WLForms", \
+"Title",ExpressionUUID->"abfa1c98-14a6-4e0a-a2d3-a426fa28b0b5"],
 
 Cell[BoxData[
  RowBox[{"PacletDirectoryAdd", " ", "@", " ", 
-  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input"],
+  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"de7cf9ce-d9b9-4b0a-a705-a29f11241dc1"],
 
 Cell[BoxData[
  RowBox[{"SetDirectory", " ", "@", " ", 
-  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input"],
+  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"801b6a8c-24c5-40cc-8a2a-4579a44e3a09"],
 
 Cell[BoxData[
- RowBox[{"<<", "WLForms`"}]], "Input"]
+ RowBox[{"FailureString", "@", 
+  RowBox[{"Failure", "[", 
+   RowBox[{"\"\<ConditionFailure\>\"", ",", 
+    RowBox[{"<|", 
+     RowBox[{"\"\<Message\>\"", "\[Rule]", "\"\<Can't contain 'a'.\>\""}], 
+     "|>"}]}], "]"}]}]], "Input",
+ CellLabel->"In[10]:=",ExpressionUUID->"f6654372-ac95-4f85-96aa-fb086683fc3f"],
+
+Cell[BoxData[
+ RowBox[{"<<", "WLForms`"}]], "Input",
+ CellLabel->"In[7]:=",ExpressionUUID->"767bf7c5-ae03-476a-9c60-0acab00b0ef8"],
+
+Cell[BoxData[
+ RowBox[{"?", "FieldController"}]], "Input",
+ CellLabel->"In[18]:=",ExpressionUUID->"54e10246-bec4-4f0b-8751-6b5153d63886"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"$fileInterpreter", "=", 
+    RowBox[{"Interpreter", "[", "\[IndentingNewLine]", 
+     RowBox[{"\"\<String\>\"", ",", "\[IndentingNewLine]", 
+      RowBox[{"StringFreeQ", "[", "\"\<a\>\"", "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Function", "@", 
+       RowBox[{"Failure", "[", 
+        RowBox[{"\"\<ConditionFailure\>\"", ",", 
+         RowBox[{"<|", 
+          RowBox[{
+          "\"\<MessageTemplate\>\"", "\[Rule]", 
+           "\"\<Can't contain 'a'.\>\""}], "|>"}]}], "]"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"form", "=", 
+  RowBox[{"Form", "[", "\[IndentingNewLine]", 
+   RowBox[{"<|", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"\"\<text\>\"", "\[Rule]", 
+      RowBox[{"<|", 
+       RowBox[{"\"\<Interpreter\>\"", "\[Rule]", "\"\<String\>\""}], "|>"}]}],
+      ",", "\[IndentingNewLine]", 
+     RowBox[{"\"\<number\>\"", "\[Rule]", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<Interpreter\>\"", "\[Rule]", "\"\<Number\>\""}], ",", 
+        " ", 
+        RowBox[{"\"\<Input\>\"", " ", "\[Rule]", " ", "1"}]}], "|>"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<selection\>\"", "\[Rule]", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<Interpreter\>\"", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"1", "\[Rule]", "\"\<first\>\""}], ",", 
+           RowBox[{"2", "\[Rule]", "\"\<second\>\""}]}], "}"}]}], ",", " ", 
+        RowBox[{"\"\<Input\>\"", " ", "\[Rule]", " ", "1"}]}], "|>"}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"\"\<file\>\"", "\[Rule]", 
+      RowBox[{"<|", 
+       RowBox[{"\"\<Interpreter\>\"", "\[Rule]", "$fileInterpreter"}], 
+       "|>"}]}]}], "\[IndentingNewLine]", "|>"}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",ExpressionUUID->"59089c63-f048-4e13-94d1-22909947a8be"],
+
+Cell[BoxData[
+ RowBox[{"FieldController", "@", 
+  RowBox[{"InputField", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "@", 
+     RowBox[{"f", "@", "\"\<file\>\""}]}], ",", "String"}], "]"}]}]], "Input",
+ CellLabel->"In[12]:=",ExpressionUUID->"68b807e8-f910-4424-b95f-e829c1e69e50"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "\"\<text\>\"", "]"}], "=", "2"}]], "Input",
+ CellLabel->"In[8]:=",ExpressionUUID->"ea036485-2edd-438d-9567-d0e19589ac4d"],
+
+Cell[BoxData[
+ RowBox[{"FieldController", "@", 
+  RowBox[{"InputField", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "@", 
+     RowBox[{"f", "@", "\"\<text\>\""}]}], ",", 
+    RowBox[{"ContinuousAction", "\[Rule]", "True"}]}], "]"}]}]], "Input",
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"e41193e1-ec3b-4c52-88f8-428339370d2c"],
+
+Cell[BoxData[
+ RowBox[{"FieldController", " ", "@", " ", 
+  RowBox[{"Slider", " ", "@", " ", 
+   RowBox[{"Dynamic", " ", "@", " ", 
+    RowBox[{"f", "@", "\"\<number\>\""}]}]}]}]], "Input",
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"eb42d180-b9aa-4c1b-ba6d-a98cb55758e2"],
+
+Cell[BoxData[
+ RowBox[{"FieldController", "@", 
+  RowBox[{"PopupMenu", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "@", 
+     RowBox[{"f", "@", "\"\<selection\>\""}]}], ",", 
+    RowBox[{"f", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "\"\<selection\>\"", ",", "\"\<Interpreter\>\""}], 
+      "]"}], "]"}]}], "]"}]}]], "Input",
+ CellLabel->"In[16]:=",ExpressionUUID->"fd87e659-96d8-4002-991d-4e10af390d03"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "\"\<selection\>\"", "]"}], "=", "3"}], ";"}]], "Input",
+ CellLabel->
+  "In[122]:=",ExpressionUUID->"c5cc7574-bcb3-4fd2-826a-7290e34470b2"],
+
+Cell[BoxData[
+ RowBox[{"Button", "[", 
+  RowBox[{"\"\<Submit\>\"", ",", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "\"\<ValidQ\>\"", "]"}], ",", 
+     RowBox[{"Beep", "[", "]"}]}], "]"}], ",", 
+   RowBox[{"Enabled", "\[Rule]", 
+    RowBox[{"Dynamic", " ", "@", " ", 
+     RowBox[{"f", "[", "\"\<ValidQ\>\"", "]"}]}]}]}], "]"}]], "Input",
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"5b3fe56d-1818-4bc0-b04e-f390501dc396"],
+
+Cell[BoxData[
+ RowBox[{"f", "[", "\"\<ValidQ\>\"", "]"}]], "Input",
+ CellLabel->"In[9]:=",ExpressionUUID->"cd6239e5-ed58-4b95-9a87-2e6348cc0239"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"InputField", "[", 
+  RowBox[{
+   RowBox[{"Dynamic", "@", "x"}], ",", "Number"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Button", "[", 
+  RowBox[{"\"\<Submit\>\"", ",", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"Echo", "@", "x"}], ",", 
+     RowBox[{"Enabled", "\[Rule]", 
+      RowBox[{"Dynamic", "[", 
+       RowBox[{"x", ">", ".5"}], "]"}]}]}], "]"}], 
+   "\[IndentingNewLine]"}]}]}], \
+"Input",ExpressionUUID->"9d3df401-1f13-4d81-a59e-5381feb58bf1"],
+
+Cell[BoxData[
+ RowBox[{"?", "Form"}]], "Input",
+ CellLabel->
+  "In[120]:=",ExpressionUUID->"f975ffa6-ad5e-4488-81db-361a7c2c979b"],
+
+Cell[BoxData["f"], "Input",
+ CellLabel->
+  "In[109]:=",ExpressionUUID->"74f7739f-19fa-4330-8c2b-9176139ee935"],
+
+Cell[BoxData[""], \
+"Input",ExpressionUUID->"e6efdd84-aeed-41de-b124-c2a4a6baa062"],
+
+Cell[BoxData[
+ RowBox[{"FE`WLForms`Private`controllerRoot$$1505", "[", 
+  RowBox[{"\"\<Mark\>\"", ",", "\"\<123123\>\""}], "]"}]], "Input",
+ CellLabel->"In[62]:=",ExpressionUUID->"1715df0e-8e2a-4943-b5c8-cd50de52baf3"],
+
+Cell[BoxData[
+ RowBox[{"FrontEndExecute", " ", "@", " ", 
+  RowBox[{"FrontEnd`AttachCell", "[", 
+   RowBox[{
+    TemplateBox[{433441, "433441"},
+     "BoxObject"], ",", 
+    RowBox[{"Cell", "[", 
+     RowBox[{"BoxData", "[", 
+      RowBox[{"StyleBox", "[", 
+       RowBox[{
+       "\"\<\\\"Enter a valid value.\\\"\>\"", ",", "\"\<Message\>\"", ",", 
+        RowBox[{"StripOnInput", "\[Rule]", "False"}]}], "]"}], "]"}], "]"}], 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{"Automatic", ",", 
+      RowBox[{"{", 
+       RowBox[{"Left", ",", "Bottom"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Left", ",", "Top"}], "}"}], ",", 
+    RowBox[{"\"\<ClosingActions\>\"", "\[Rule]", 
+     RowBox[{"{", "\"\<EvaluatorQuit\>\"", "}"}]}]}], "]"}]}]], "Input",
+ CellLabel->"In[33]:=",ExpressionUUID->"cdcdb973-f0b2-4108-a57e-ad4b71bd5b64"],
+
+Cell[BoxData[
+ RowBox[{"NotebookDelete", "@", "%"}]], "Input",
+ CellLabel->"In[32]:=",ExpressionUUID->"3921b630-8307-4aa7-b513-f0065476c3af"],
+
+Cell[BoxData["ImageIdentify"], \
+"Input",ExpressionUUID->"d6c68e90-38c9-4c13-a87d-e43894cfdd21"]
+}, Open  ]]
 },
+WindowSize->{1341, 873},
+WindowMargins->{{Automatic, 96}, {Automatic, 51}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 TrackCellChangeTimes->False,
+Magnification:>1.2 Inherited,
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (November 26, 2019)",
-StyleDefinitions->"Default.nb"
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"de97df0f-5025-41fb-9bba-6fc9e3c2402b"
 ]
-(* End of Notebook Content *)
 
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{}
-*)
-(*CellTagsIndex
-CellTagsIndex->{}
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[558, 20, 24, 0, 70, "Title",ExpressionUUID->"abfa1c98-14a6-4e0a-a2d3-a426fa28b0b5"],
-Cell[585, 22, 115, 2, 70, "Input",ExpressionUUID->"de7cf9ce-d9b9-4b0a-a705-a29f11241dc1"],
-Cell[703, 26, 109, 2, 70, "Input",ExpressionUUID->"801b6a8c-24c5-40cc-8a2a-4579a44e3a09"],
-Cell[815, 30, 52, 1, 70, "Input",ExpressionUUID->"767bf7c5-ae03-476a-9c60-0acab00b0ef8"]
-}
-]
-*)
-
-(* End of internal cache information *)
