@@ -7,9 +7,9 @@ Alternative to FormObjects, focused on desktop Mathematica rather than Wolfram C
 
 ## Quick intro
 
-The idea is to borrow as much as possible from FormObjects/FormFunctions but to adapt it for desktop gui creators' sake.
+The idea is to borrow as much as possible from FormObjects/FormFunctions and to adapt it for desktop gui creators' sake.
 
-There are a few problems with FormObjects in MMA, which otherwise work well withing the Cloud environment, that prompted me to create it.
+There are a few problems with FormObjects in MMA, which otherwise work well within the Cloud environment, that prompted me to create it.
 
 - extracting values
 
